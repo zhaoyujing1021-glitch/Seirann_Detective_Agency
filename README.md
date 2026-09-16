@@ -1,0 +1,132 @@
+[説明.md](https://github.com/user-attachments/files/32272106/default.md)
+# 説明
+本ドキュメントは、制作したWebページの構成および工夫点をまとめた説明書です。
+
+## 目次
+(ページ中の特定場所へのジャンプ)
+- [画面一覧表](#画面一覧表)
+- [工夫したこと](#工夫したこと)  
+- [画面構成](#画面構成)
+
+- [実装していない機能](#実装していない機能)
+
+## 画面一覧表
+
+|番目|No.|ファイル名|内容|遷移|
+|:-------------|:-------------|:------------:|:------------:|:-------------|
+|01|00|00index.html|始まり|00|
+|02|01|01work.html|事務内容|00-01|
+|03|02|02info.html|事務所情報|00-02|
+|04|03|03log_in.html|ログイン画面|00-03|
+|05|031|031sign_up.html|新規会員|00-03-031|
+|06|032|032select.html|ログイン後選択画面|00-03-032|
+|07|0321|0321request_form.html|依頼新規作成|00-03-032-0321|
+|08|0322|0322request_history.html|依頼履歴|00-03-032-0322|
+|09|0323|0323request_list.pngy.html|依頼受け取り(作成X)|00-03-032-0323|
+|10|04|style.css|デザイン・スタイル|なし|
+|11|05|js.js|振る舞い|なし|
+
+```mermaid
+graph TD;
+    00index.html-->01work.html;
+    00index.html-->02info.html;
+    00index.html-->03log_in.html;
+    03log_in.html-->031sign_up.html;
+    03log_in.html-->032select.html;
+    032select.html-->0321request_form.html;
+    032select.html-->0322request_history.html;
+    032select.html-->0323request_list.html;
+```
+
+## 工夫したこと
+1. できるだけ実際の画面要素を並びました
+    <img src="説明(画像ファイル)\img\kufu011.png" width=80%>
+    <img src="説明(画像ファイル)\img\kufu012.png" width=80%>
+2. 最初から構成番号を決める
+    <img src="説明(画像ファイル)\img\kufu021.png" width=80%>
+3. ユーザー視点から　最初開くページ(のリンク)を明確的に置くこと
+    <img src="説明(画像ファイル)\img\kufu031.png" width=80%>
+4. プログラマ視点から　様式のコメントを詳細記録すること。可読性とメンテナンス性の向上
+
+ <img src="説明(画像ファイル)\img\kufu041.png" width=50%>
+
+---
+ <img src="説明(画像ファイル)\img\kufu042.png" width=50%>
+
+ ---
+
+ <img src="説明(画像ファイル)\img\kufu043.png" width=50%>
+
+## 画面構成
+0. index.html
+
+ <img src="説明(画像ファイル)\img\00index.png" width=50%>
+
+1. work.html
+   
+ <img src="説明(画像ファイル)\img\01work.png" width=50%>
+
+2. info.html
+   
+ <img src="説明(画像ファイル)\img\02info.png" width=50%>
+
+3. log_in.html
+   
+ <img src="説明(画像ファイル)\img\03log_in.png" width=50%>
+
+4. sign_up.html
+   
+ <img src="説明(画像ファイル)\img\031sign_up.png" width=50%>
+
+5. select.html
+   
+ <img src="説明(画像ファイル)\img\032select.png" width=50%>
+
+6. request_form.html
+   
+ <img src="説明(画像ファイル)\img\0321request_form.png" width=50%>
+
+7. request_history.html
+   
+ <img src="説明(画像ファイル)\img\0322request_history.png" width=50%>
+
+8. request_list.html
+   
+ <img src="説明(画像ファイル)\img\0323request_list.png" width=50%>
+
+
+## 実装していない機能
+1.
+```mermaid
+    graph TD;
+    00index.html-->裏道ページ;
+```
+条件（実装済）
+- index.htmlの"青藍探偵事務所"をクリック
+- consoleパネルでページリンク表示
+  
+
+2.
+```mermaid
+graph TD;
+    03log_in-->パスワード変更ページ;
+    03log_in-->Twitter-xやGoogleアカウント登録ページ;
+```
+
+3.
+```mermaid
+    graph TD;
+    031sign_up-->個人情報利用ページ;
+    031sign_up-->法律-手数料などページ;
+```
+
+
+4.
+```mermaid
+    graph TD;
+    0321request_form-->支払いページ;
+```
+
+ ---
+2026年9月14日  
+ZHAO YUJING(チョウ　ユウキョウ)
